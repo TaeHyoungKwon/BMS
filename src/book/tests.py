@@ -1,3 +1,2 @@
-from django.test import TestCase
-
-# Create your tests here.
+def test_should_fail():
+    assert 1 == 0
