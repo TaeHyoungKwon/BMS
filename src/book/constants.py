@@ -1,0 +1,5 @@
+NEW_BOOKS = "NEW_BOOKS"
+USED_BOOKS = "USED_BOOKS"
+E_BOOKS = "E_BOOKS"
+
+BOOK_TYPE = [(NEW_BOOKS, "새 책"), (USED_BOOKS, "중고 책"), (E_BOOKS, "E-Book")]
