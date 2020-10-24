@@ -12,7 +12,7 @@ class Author(models.Model):
 
 class Book(models.Model):
     name = models.CharField(max_length=200)
-    sub_name = models.CharField(max_length=200)
+    sub_name = models.CharField(max_length=200, blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     description = models.TextField()
     purchased_at = models.DateField(null=True)
