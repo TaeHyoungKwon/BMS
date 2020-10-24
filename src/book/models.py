@@ -15,7 +15,7 @@ class Book(models.Model):
     sub_name = models.CharField(max_length=200, blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=5, decimal_places=0, blank=True)
+    price = models.DecimalField(max_digits=5, decimal_places=0, blank=True, default=0)
     purchased_at = models.DateField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
