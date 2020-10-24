@@ -25,7 +25,7 @@ SECRET_KEY = "sup!k#pdb$r84=$g)&pxk8#e7ec_+)5nzdo%y_5jq+g_+!=^wo"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["testserver"]
 
 
 # Application definition
@@ -40,7 +40,7 @@ BUILT_IN_APPS = [
 
 APPS = ["book"]
 
-THIRD_PARTY_APPS = ["django_extensions"]
+THIRD_PARTY_APPS = ["django_extensions", "rest_framework"]
 
 INSTALLED_APPS = BUILT_IN_APPS + APPS + THIRD_PARTY_APPS
 
@@ -116,3 +116,12 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = "auth.User"
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
