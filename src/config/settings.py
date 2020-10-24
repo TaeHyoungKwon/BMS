@@ -40,7 +40,9 @@ BUILT_IN_APPS = [
 
 APPS = ["book"]
 
-INSTALLED_APPS = BUILT_IN_APPS + APPS
+THIRD_PARTY_APPS = ["django_extensions"]
+
+INSTALLED_APPS = BUILT_IN_APPS + APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
