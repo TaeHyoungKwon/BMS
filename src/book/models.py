@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from django.db import models
 
 from book.constants import BOOK_TYPE, NEW_BOOKS
