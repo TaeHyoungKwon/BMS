@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 
@@ -13,7 +15,7 @@ class Book(models.Model):
     sub_name = models.CharField(max_length=200)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     description = models.TextField()
-    published_date = models.DateTimeField()
+    purchased_at = models.DateField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
